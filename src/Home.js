@@ -1,26 +1,26 @@
 import React from "react";
-import App from "./App";
-import App2 from "./App2";
-import App3 from "./App3";
-import Initial from "./Initial";
-import Error from "./Error";
+import ContextEj from "./components/ContextEx";
+import EffectEx from "./components/EffectEx";
+import ReducerEx from "./components/ReducerEx";
+import Initial from "./components/Initial";
+import Error from "./components/Error";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import './Home.css'
+import './styles/Home.css'
 
 function Home () {
     return(
     <Router>
-        <nav>
+        <nav className="navbar">
             <Link to="/">Home</Link>
-            <Link to="/app">useContext</Link>
-            <Link to="/app2">useEffect</Link>
-            <Link to="/app3">useReducer</Link>
+            <Link to="/ContextEj">useContext</Link>
+            <Link to="/EffectEx">useEffect</Link>
+            <Link to="/ReducerEx">useReducer</Link>
         </nav>
         <Routes>
             <Route path="/" element={<Initial/>}/>
-            <Route path="/app" element={<App/>}/>
-            <Route path="/app2" element={<App2/>}/>
-            <Route path="/app3" element={<App3/>}/>+
+            <Route path="/ContextEj" element={<ContextEj/>}/>
+            <Route path="/EffectEx" element={<EffectEx/>}/>
+            <Route path="/ReducerEx" element={<ReducerEx/>}/>+
             <Route path="*" element={<Error/>}/>
         </Routes>
     </Router>

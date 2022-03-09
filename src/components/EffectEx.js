@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 
-function App2 () {
+function EffectEx () {
     const [stateCar, setStateCar] = useState(false);
     const [contar, setContar] = useState(0);
 
@@ -24,4 +24,4 @@ function App2 () {
     )
 }
 
-export default App2
+export default EffectEx

@@ -1,9 +1,9 @@
-import UserContext from './context/UserContext';
-import MoreInfo from './components/MoreInfo';
+import UserContext from '../context/UserContext';
+import MoreInfo from './MoreInfo';
 import { useRef } from 'react';
-import './App.css';
+import '../styles/App.css';
 
-function App() {
+function ContextEj() {
 
   //Podría ser una petición a una API y nos devuelve valores concretos para userData
   const userData = {
@@ -28,7 +28,7 @@ function App() {
       </div>
 
       <div className="ref">
-        <input type="text" ref={inputRef} />
+        <input type="text" ref={inputRef} className="input-things"/>
         <button onClick={makeThings}>Hacer cosas</button>
 
         <div ref={resultRef}></div>
@@ -37,4 +37,4 @@ function App() {
   );
 }
 
-export default App;
+export default ContextEj;

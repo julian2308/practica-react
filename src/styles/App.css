@@ -1,0 +1,20 @@
+.App {
+  text-align: center;
+}
+
+.form-register{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-register{
+  margin-top: 10px;
+}
+
+.ref{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+

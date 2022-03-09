@@ -1,5 +1,5 @@
 import { useReducer, useRef} from 'react';
-import './App.css';
+import '../styles/App.css';
 
 const appReducer = (state, action) => {
     switch(action.type){
@@ -14,7 +14,7 @@ const appReducer = (state, action) => {
 const ADD_USER = 'ADD_USER'
 
 
-function App3() {
+function ReducerEx() {
 
     const inputName = useRef(null)
     const inputAge = useRef(null)
@@ -46,21 +46,21 @@ function App3() {
     }
 
   return (
-      <div>
+      <div className="App">
           {state.users.map(user => (
             <div>{ `${user.name} ${user.age}`}</div>
           ))}
 
-          <form>
+          <form className="form-register">
             <label>Name:  </label>
             <input ref={inputName} />
             <label>Age:  </label>
             <input ref={inputAge} />
           </form>
 
-          <button onClick={() => addUser()}>Add user</button>
+          <button className="btn-register" onClick={() => addUser()}>Add user</button>
       </div>
   );
 }
 
-export default App3;
+export default ReducerEx;
